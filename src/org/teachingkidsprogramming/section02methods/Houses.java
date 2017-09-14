@@ -15,14 +15,10 @@ public class Houses
     drawHouse(120);
     drawHouse(90);
     drawHouse(20);
-    drawHouse(100);
-    drawHouse(80);
-    drawHouse(40);
-    drawHouse(150);
   }
   private static void drawHouse(int height)
   {
-    Tortoise.setPenColor(PenColors.Grays.LightGray);
+    Tortoise.setPenColor(PenColors.Reds.Red);
     Tortoise.move(height);
     Tortoise.turn(90);
     Tortoise.move(30);

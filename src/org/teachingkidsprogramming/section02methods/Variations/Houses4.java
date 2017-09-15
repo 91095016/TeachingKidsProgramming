@@ -4,7 +4,7 @@ import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.virtualproctor.VirtualProctor;
 
-public class Houses3
+public class Houses4
 {
   public static void main(String[] args)
   {
@@ -12,11 +12,22 @@ public class Houses3
     VirtualProctor.setName("Rebecca Chang");
     Tortoise.show();
     Tortoise.setSpeed(10);
-    Tortoise.setX(200);
+    Tortoise.setX(0);
     int height = 40;
-    drawHouseFlatRoof(height);
-    drawHousePointyRoof(height);
+    drawHouseFlatRoof(height + 20);
+    drawHousePointyRoof(height + 30);
     drawHouseSlantRoof(height);
+    drawHouseCircleRoof(height);
+    drawHouseFlatRoof(height + 60);
+    drawHousePointyRoof(height + 100);
+    drawHouseSlantRoof(height);
+    drawHouseCircleRoof(height);
+    drawHouseFlatRoof(height + 10);
+    drawHousePointyRoof(height + 100);
+    drawHouseSlantRoof(height);
+    drawHouseCircleRoof(height);
+    drawHouseFlatRoof(height + 30);
+    drawHousePointyRoof(height + 60);
   }
   private static void drawHouseFlatRoof(int height)
   {
@@ -52,6 +63,19 @@ public class Houses3
     Tortoise.move(20);
     Tortoise.turn(-90);
   }
+  private static void drawHouseCircleRoof(int height)
+  {
+    Tortoise.setPenColor(PenColors.Reds.Red);
+    Tortoise.move(height + 10);
+    //drawFlatRoof();
+    //drawPointyRoof();
+    //drawSlantRoof();
+    drawCircleRoof();
+    Tortoise.move(50);
+    Tortoise.turn(-90);
+    Tortoise.move(20);
+    Tortoise.turn(-90);
+  }
   private static void drawPointyRoof()
   {
     Tortoise.turn(45);
@@ -72,5 +96,13 @@ public class Houses3
     Tortoise.turn(135);
     Tortoise.move(30);
     Tortoise.turn(45);
+  }
+  private static void drawCircleRoof()
+  {
+    for (int i = 1; i < 180; i++)
+    {
+      Tortoise.move(0.25);
+      Tortoise.turn(1);
+    }
   }
 }

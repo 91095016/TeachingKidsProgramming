@@ -12,22 +12,12 @@ public class Houses4
     VirtualProctor.setName("Rebecca Chang");
     Tortoise.show();
     Tortoise.setSpeed(10);
-    Tortoise.setX(0);
+    Tortoise.setX(200);
     int height = 40;
-    drawHouseFlatRoof(height + 20);
+    drawHouseCircleRoof(height);
+    drawHouseFlatRoof(height + 50);
     drawHousePointyRoof(height + 30);
     drawHouseSlantRoof(height);
-    drawHouseCircleRoof(height);
-    drawHouseFlatRoof(height + 60);
-    drawHousePointyRoof(height + 100);
-    drawHouseSlantRoof(height);
-    drawHouseCircleRoof(height);
-    drawHouseFlatRoof(height + 10);
-    drawHousePointyRoof(height + 100);
-    drawHouseSlantRoof(height);
-    drawHouseCircleRoof(height);
-    drawHouseFlatRoof(height + 30);
-    drawHousePointyRoof(height + 60);
   }
   private static void drawHouseFlatRoof(int height)
   {

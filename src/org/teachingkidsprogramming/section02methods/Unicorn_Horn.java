@@ -4,27 +4,29 @@ import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 
 @SuppressWarnings("unused")
-public class TriangleShell
+public class Unicorn_Horn
 {
   private static int length = 1;
   public static void main(String[] args)
   {
+    Tortoise.setX(200);
     Tortoise.show();
     Tortoise.setSpeed(10);
-    for (int i = 0; i < 60; i++)
+    Tortoise.turn(45);
+    for (int i = 0; i < 100; i++)
     {
       Tortoise.setPenColor(PenColors.getRandomColor());
-      length = length + 4;
+      length = length + 1;
       drawTriangle();
-      Tortoise.turn(360 / 60);
+      //Tortoise.turn(360 / 60);
     }
   }
   private static void drawTriangle()
   {
     for (int i = 0; i < 3; i++)
     {
+      Tortoise.turn(135);
       Tortoise.move(length);
-      Tortoise.turn(360 / 3);
     }
   }
 }

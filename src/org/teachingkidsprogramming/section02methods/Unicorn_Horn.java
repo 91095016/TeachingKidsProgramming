@@ -13,7 +13,7 @@ public class Unicorn_Horn
     Tortoise.show();
     Tortoise.setSpeed(10);
     Tortoise.turn(45);
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 500; i++)
     {
       Tortoise.setPenColor(PenColors.getRandomColor());
       length = length + 1;

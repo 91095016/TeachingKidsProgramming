@@ -8,32 +8,34 @@ public class PyramidsOfGiza
   public static void main(String[] args) throws Exception
   {
     setUpPyramidLand();
+    makePyramid1();
+    makePyramid2();
+    makePyramid3();
+  }
+  private static void makePyramid3()
+  {
+    Tortoise.move(100);
+    Tortoise.turn(90);
+    Tortoise.move(100);
+    Tortoise.turn(135);
+    Tortoise.move(210);
+  }
+  private static void makePyramid2()
+  {
+    Tortoise.turn(-90);
+    Tortoise.move(100);
+    Tortoise.turn(90);
+    Tortoise.move(100);
+    Tortoise.turn(-90);
+  }
+  private static void makePyramid1()
+  {
     Tortoise.turn(-90);
     Tortoise.move(220);
     Tortoise.turn(135);
     Tortoise.move(100);
     Tortoise.turn(90);
     Tortoise.move(100);
-    //  Turn the tortoise 90 degrees to the left
-    Tortoise.turn(-90);
-    //  Move the tortoise 100 pixels
-    Tortoise.move(100);
-    //  Turn the tortoise 90 degrees to the right 
-    Tortoise.turn(90);
-    //  Move the tortoise 100 pixels
-    Tortoise.move(100);
-    //  Turn the tortoise 90 degrees to the left 
-    Tortoise.turn(-90);
-    //  Move the tortoise 100 pixels
-    Tortoise.move(100);
-    //  Turn the tortoise 90 degrees to the right 
-    Tortoise.turn(90);
-    //  Move the tortoise 100 pixels
-    Tortoise.move(100);
-    //  Turn the tortoise 135 degrees to the right 
-    Tortoise.turn(135);
-    //  Move the tortoise 210 pixels
-    Tortoise.move(210);
   }
   private static void setUpPyramidLand()
   {

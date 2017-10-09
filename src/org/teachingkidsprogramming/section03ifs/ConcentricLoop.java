@@ -14,19 +14,14 @@ public class ConcentricLoop
     {
       Tortoise.move(3);
       Tortoise.turn(1);
-      //      If i is divisible by 20 --(HINT: Use mod operator '%') --#7
-      if (i % 20)
+      if (i % 20 == 0)
       {
+        for (int j = 0; j < 360; j++)
+        {
+          Tortoise.move(1);
+          Tortoise.turn(1);
+        }
       }
-      for (int j = 0; j < 360; j++)
-      {
-        Tortoise.move(1);
-        Tortoise.turn(1);
-      }
-      //              Change the width of the line that the tortoise draws
-      //to 1/100th of the current line --#9      
-      Tortoise.setPenWidth(1 / 100);
-      //          End Repeat --#8.2
     }
   }
 }

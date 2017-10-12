@@ -2,11 +2,16 @@ package org.teachingkidsprogramming.section03ifs;
 
 import java.awt.Color;
 
+import org.omg.CORBA.PRIVATE_MEMBER;
 import org.teachingextensions.approvals.lite.util.ThreadUtils;
 import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
+// THIS IS THE ONE I DID WITH MY TEACHER AND MY FELLOW CLASSMATES.
+// I WILL REDO THIS LATER AND I KNOW I FAILED
+// THIS WAS TOO CONFUSING, I KEPT ON GETTING RANDOM ERRORS 
+// FIONA WEE ENG WAS INSTRUCTING THE WHOLE CLASS
 public class ChooseYourOwnAdventure
 {
   public static void main(String[] args)
@@ -28,29 +33,37 @@ public class ChooseYourOwnAdventure
     }
     else
     {
-      //      endStory (recipe below) --#6.1
-      //      ------------- Recipe for endStory --#6.2
-      //         Tell the user "You don't know how to read directions. You can't play this game. The end." --#5
-      //      ------------- End of endStory recipe --#6.3
+      endStory();
     }
+  }
+  private static void endStory()
+  {
+    MessageBox.showMessage("You don't know how to read directions. You can't play this game. The end.");
   }
   private static void approachOoze()
   {
     MessageBox.showMessage(
         "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket.");
-    //         Ask the user "Do you want to pour the ooze into the 'backyard' or 'toilet'?" --#7
+    MessageBox.askForTextInput("Do you want to pour the ooze into the 'backyard' or 'toilet'?");
     //         If they answer "toilet" --#8.1
-    //            pourIntoToilet (recipe below) --#12.1
-    //            ------------- Recipe for pourIntoToilet --#12.2
-    //               Tell the user "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste." --#10
-    //               Ask the user "Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?" --#11
-    //               If they answer "yes" --#13.1
-    //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#14
-    //               Otherwise, if they answer "heck yes" --#13.2
-    //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#15
-    //               Otherwise, if they answer anything else --#13.3
-    //                    endStory --#16
-    //            ------------- End of pourIntoToilet recipe --#12.3
+    if ("toilet".equalsIgnoreCase(answer))
+    {
+      MessageBox.showMessage(
+          "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste.");
+      //            pourIntoToilet (recipe below) --#12.1
+      //            ------------- Recipe for pourIntoToilet --#12.2
+      //               Tell the user "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste." --#10
+      //               Ask the user "Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?" --#11
+      //               If they answer "yes" --#13.1
+      //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#14
+      //               Otherwise, if they answer "heck yes" --#13.2
+      //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#15
+      //               Otherwise, if they answer anything else --#13.3
+      //                    endStory --#16
+      //            ------------- End of pourIntoToilet recipe --#12.3
+    }
+  }else if("backyard".equalsIgnoreCase(answer))
+  {
     //         Otherwise, if they answer "backyard" --#8.2
     //            pourIntoBackyard (recipe below) --#19.1
     //            ------------- Recipe for pourIntoBackyard --#19.2
@@ -63,9 +76,9 @@ public class ChooseYourOwnAdventure
     //                Otherwise, if they answer anything else --#20.3
     //                    endStory --#23
     //         ------------- End of pourIntoBackyard recipe --#19.3
-    //         Otherwise, if they answer anything else --#8.3
-    //            endStory --#9
-    //      ------------- End of approachOoze recipe --#4.3
+  }else
+  {
+    endStory();
   }
   private static void wakeUp()
   {

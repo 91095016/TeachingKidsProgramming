@@ -7,6 +7,7 @@ import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
+// THIS IS THE ONE WHERE I TRIED TO DO IT BY MYSELF BUT INSTEAD JUST WENT HORRIBLY WRONG.
 public class ChooseYourOwnAdventure1
 {
   public static void main(String[] args)

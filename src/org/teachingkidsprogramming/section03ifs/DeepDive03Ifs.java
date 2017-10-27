@@ -223,6 +223,45 @@ public class DeepDive03Ifs
     }
     Assert.assertEquals("ketchup", dessert);
   }
+  @Test
+  public void ifStatements() throws Exception
+  {
+    String teacherSays = "nay";
+    if (false)
+    {
+      teacherSays = "can";
+    }
+    Assert.assertEquals("nay", teacherSays);
+  }
+  @Test
+  public void doesRebeccaLikePink() throws Exception
+  {
+    String rebeccaSays = "true";
+    if (false)
+    {
+      rebeccaSays = "false";
+    }
+    Assert.assertNotEquals(rebeccaSays, "false");
+  }
+  @Test
+  public void doesRebeccaLikeHorses() throws Exception
+  {
+    String rebeccaSays = "false";
+    if (false)
+    {
+      rebeccaSays = "true";
+    }
+    Assert.assertNotEquals(rebeccaSays, "true");
+  }
+  public void doesRebeccaLikeDonuts() throws Exception
+  {
+    String rebeccaSays = "true";
+    if (true)
+    {
+      rebeccaSays = "false";
+    }
+    Assert.assertNotEquals(rebeccaSays, "false");
+  }
   /**
    * Ignore the following, It's needed to run the deep dive
    * 

@@ -20,7 +20,9 @@ public class PentagonCrazy
       adjustPen();
       //        The current length of a side is the same as the number of the side you are about to draw ( 1st side = 1 pixel, 2nd side = 2 pixels, etc) --#4.2
       //        Move the tortoise the length of a side --#4.1
-      Tortoise.move(50);
+      Tortoise.move(1);
+      Tortoise.move(2);
+      Tortoise.move(3);
       Tortoise.turn(360 / 360);
       Tortoise.turn(1);
     }

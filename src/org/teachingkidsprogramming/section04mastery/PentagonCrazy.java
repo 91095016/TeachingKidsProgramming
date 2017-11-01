@@ -18,19 +18,16 @@ public class PentagonCrazy
     for (int i = 0; i < 200; i++)
     {
       adjustPen();
-      //        The current length of a side is the same as the number of the side you are about to draw ( 1st side = 1 pixel, 2nd side = 2 pixels, etc) --#4.2
-      //        Move the tortoise the length of a side --#4.1
-      Tortoise.move(1);
-      Tortoise.move(2);
-      Tortoise.move(3);
-      Tortoise.turn(360 / 360);
+      Tortoise.move(i++);
+      Tortoise.turn(360 / 5);
       Tortoise.turn(1);
     }
   }
   private static void adjustPen()
   {
     Tortoise.setPenColor(ColorWheel.getNextColor());
-    Tortoise.setPenWidth(+1);
+    int i = 2;
+    Tortoise.setPenWidth(i++);
     Tortoise.setPenWidth(1);
   }
   private static void createColorPalette()

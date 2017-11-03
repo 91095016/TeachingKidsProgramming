@@ -29,7 +29,6 @@ public class PentagonCrazy
     Tortoise.setPenColor(ColorWheel.getNextColor());
     Tortoise.setPenColor(ColorWheel.getNextColor());
     Tortoise.setPenColor(ColorWheel.getNextColor());
-    Tortoise.setPenColor(ColorWheel.getNextColor());
     int i = 2;
     Tortoise.setPenWidth(i++);
     Tortoise.setPenWidth(1);

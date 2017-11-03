@@ -1,5 +1,6 @@
 package org.teachingkidsprogramming.section05recursion;
 
+import org.teachingextensions.logo.Tortoise;
 import org.teachingkidsprogramming.recipes.quizzes.graders.TreeQuizAdapter;
 import org.teachingkidsprogramming.recipes.quizzes.graders.TreeQuizGrader;
 
@@ -9,9 +10,7 @@ public class TreeQuiz extends TreeQuizAdapter
   {
     //   Question 1 
     //   doubleLength (recipe below) 
-    //   ------------- Recipe for doubleLength 
-    //       make the current length twice what it is
-    //   ------------- End of doubleLength recipe
+    doubleLength();
     //
     //   Question 2 
     //   decreaseTurn (recipe below) 
@@ -30,6 +29,13 @@ public class TreeQuiz extends TreeQuizAdapter
     //   ------------- Recipe for angleFive 
     //       sets the 5th angle to 36 degrees
     //   ------------- End of angleFive recipe
+  }
+  private void doubleLength()
+  {
+    //   ------------- Recipe for doubleLength 
+    //       make the current length twice what it is
+    Tortoise.move(length * 2);
+    //   ------------- End of doubleLength recipe
   }
   public static void main(String[] args)
   {

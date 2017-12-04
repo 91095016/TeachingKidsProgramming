@@ -47,15 +47,15 @@ public class exceptionalAdLibsVariation
   } // End of EDVERB method
   private static String currentBodyPart()
   {
-    String bodyPart = MessageBox.askForTextInput("Enter an edverb: ");
+    String bodyPart = MessageBox.askForTextInput("Enter a body part: ");
     if (bodyPart.isEmpty())
     {// Beginning of IF STATEMENT
-      MessageBox.showMessage("Invalid input. Please enter an edverb. Try again.");
+      MessageBox.showMessage("Invalid input. Please enter a body part. Try again.");
       currentBodyPart();
     } // End of IF STATEMENT
     if (bodyPart.matches("[.*\\d+.*]"))
     { // Beginning of IF STATEMENT
-      MessageBox.showMessage("NUMBERS are not EDVERBS. Try again.");
+      MessageBox.showMessage("NUMBERS are not BODY PARTS. Try again.");
       currentBodyPart();
     } // End of IF STATEMENT
     return bodyPart;

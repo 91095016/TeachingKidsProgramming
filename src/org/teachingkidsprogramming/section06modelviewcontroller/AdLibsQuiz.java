@@ -3,6 +3,8 @@ package org.teachingkidsprogramming.section06modelviewcontroller;
 import org.teachingkidsprogramming.recipes.quizzes.graders.AdLibsQuizAdapter;
 import org.teachingkidsprogramming.recipes.quizzes.graders.AdLibsQuizGrader;
 
+import com.sun.javafx.scene.paint.GradientUtils.Parser;
+
 public class AdLibsQuiz extends AdLibsQuizAdapter
 {
   @Override
@@ -21,11 +23,13 @@ public class AdLibsQuiz extends AdLibsQuizAdapter
   public void question3(String templateText, Object model)
   {
     //  Use the parser to combine the template and the model as word3
+    word3 = Parser.parse(templateText, model);
   }
   @Override
   public void question4(Pieces pieces)
   {
     //  Set template4 to the template which does'g' + pieces.middle + 'e'
+    template4 = "g(middle)e";
   }
   public static void main(String[] args)
   {

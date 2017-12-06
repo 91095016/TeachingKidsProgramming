@@ -7,9 +7,20 @@ public class FizzBuzz
   //    If that number is divisible by 5, then print the word 'Buzz', 
   //    If that number is divisible by 3 and 5, then print the word 'FizzBuzz'
   //
-  //    NOTE: this is a kata (higher level instructions)
-  //    part of the exercise is to translate into line-by-line English, THEN Java
-  //
-  //    For more complete directions see this page
-  //    https://www.penflip.com/lynnlangit/tkp-lesson-plans/blob/master/course09.txt
+  public static void main(String[] args)
+  {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 1; i <= 100; i++)
+    {
+      sb.append(convert(i));
+    }
+    System.out.print(sb);
+  }
+  public static String convert(int i)
+  {
+    if (0 == i % 15) { return "\n FizzBuzz"; }
+    if (0 == i % 5) { return "\n Buzz"; }
+    if (0 == i % 3) { return "\n Fizz"; }
+    return "\n " + i;
+  }
 }
